@@ -16,6 +16,23 @@ This project applies unsupervised machine learning to highlight potentially mali
 
 ---
 
+## 🤖 How AI Is Used
+This project uses unsupervised machine learning to detect unusual authentication behavior without relying on predefined attack rules.
+
+An Isolation Forest model is trained on engineered log features (such as login time, event type, user frequency, IP frequency, and recent failed attempts) to learn what normal authentication activity looks like. Events that deviate significantly from these learned patterns are flagged as anomalies.
+
+The model:
+
+Learns baseline behavior using model.fit(X)
+
+Assigns an anomaly score to each event using decision_function()
+
+Flags statistically unusual events using predict() (−1 = anomaly, 1 = normal)
+
+This approach allows the system to surface suspicious login activity—including off-hours privileged access and rare user/IP behavior—even when the login itself is successful.
+
+---
+
 ## 🧠 How It Works
 1. Parses Linux-style `auth.log` authentication events
 2. Extracts security-relevant features:
