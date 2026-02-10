@@ -1,5 +1,10 @@
 # AI Log Anomaly Detector
 
+### Example Detection Output
+<img width="676" height="256" alt="terminal_screenshot" src="https://github.com/user-attachments/assets/d50fc758-ee64-4bd6-9e52-a6ca73193594" />
+
+The model flags statistically unusual authentication events, including invalid user enumeration and off-hours privileged access.
+
 An AI-assisted security project that analyzes Linux authentication logs and identifies suspicious login behavior using machine learning–based anomaly detection. This project simulates how Security Operations Center (SOC) teams detect unusual authentication activity such as brute-force attempts, invalid user access, and off-hours privileged logins.
 
 ---
@@ -32,6 +37,11 @@ This project applies unsupervised machine learning to highlight potentially mali
 Detected anomalies are exported to `output/anomalies.csv` for analysis.
 
 ---
+
+### Anomaly Report
+<img width="1269" height="289" alt="csv_screenshot" src="https://github.com/user-attachments/assets/1bfb08d7-a7f3-4608-b11b-bc74b764cf63" />
+
+Detected events are exported to a CSV file for analyst review, including feature values and anomaly scores.
 
 ## 🧰 Technologies Used
 - Python
